@@ -104,7 +104,7 @@ module tt_um_7seg_snake
       lfsr <= {lfsr[22:0], tap};
   end
 
-  assign tap <= lfsr[23] ^ lfsr[22] ^ lfsr[21] ^ lfsr[16];
+  assign tap = lfsr[23] ^ lfsr[22] ^ lfsr[21] ^ lfsr[16];
 
   always @(posedge clk or negedge rst_n)
   begin
