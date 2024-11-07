@@ -56,9 +56,9 @@ module tt_um_7seg_snake
               // Top segment
               3'h0: head <= 3'h1;
               3'h1: head <= lfsr[0] ? 3'h2 : 3'h6;
-              3'h2: head <= 1'h3;
+              3'h2: head <= 3'h3;
               3'h4: head <= lfsr[0] ? 3'h5 : 3'h6;
-              3'h5: head <= 1'h0;
+              3'h5: head <= 3'h0;
               3'h6:
                 begin
                   // Test for a change in direction
@@ -77,9 +77,9 @@ module tt_um_7seg_snake
             case (head)
               3'h0: head <= 3'h5;
               3'h5: head <= lfsr[0] ? 3'h4 : 3'h6;
-              3'h4: head <= 1'h3;
+              3'h4: head <= 3'h3;
               3'h3: head <= lfsr[0] ? 3'h2 : 3'h6;
-              3'h1: head <= 1'h0;
+              3'h1: head <= 3'h0;
               3'h6:
                 begin
                   // Test for a change in direction
@@ -101,7 +101,7 @@ module tt_um_7seg_snake
     if (!rst_n)
       lfsr <= 24'h1a037;
     else
-      lfsr <= {lfsr[22:0], tap}
+      lfsr <= {lfsr[22:0], tap};
   end
 
   assign tap <= lfsr[23] ^ lfsr[22] ^ lfsr[21] ^ lfsr[16];
