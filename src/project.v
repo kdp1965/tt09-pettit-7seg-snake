@@ -122,7 +122,7 @@ module tt_um_7seg_snake
     end
   end
 
-  assign move = move_p1 & !move_p0;
+  assign move = move_p1 & !move_p2;
 
   always @*
   begin
