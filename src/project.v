@@ -128,22 +128,22 @@ module tt_um_7seg_snake
   begin
     move_bit <= 1'b0;
     case (ui_in[3:0])
-    case 4'h0:  move_bit <= move_count[25];
-    case 4'h1:  move_bit <= move_count[24];
-    case 4'h2:  move_bit <= move_count[23];
-    case 4'h3:  move_bit <= move_count[22];
-    case 4'h4:  move_bit <= move_count[21];
-    case 4'h5:  move_bit <= move_count[20];
-    case 4'h6:  move_bit <= move_count[19];
-    case 4'h7:  move_bit <= move_count[18];
-    case 4'h8:  move_bit <= move_count[17];
-    case 4'h9:  move_bit <= move_count[16];
-    case 4'ha:  move_bit <= move_count[15];
-    case 4'hb:  move_bit <= move_count[14];
-    case 4'hc:  move_bit <= move_count[13];
-    case 4'hd:  move_bit <= move_count[12];
-    case 4'he:  move_bit <= move_count[11];
-    case 4'hf:  move_bit <= move_count[10];
+    4'h0:  move_bit <= move_count[25];
+    4'h1:  move_bit <= move_count[24];
+    4'h2:  move_bit <= move_count[23];
+    4'h3:  move_bit <= move_count[22];
+    4'h4:  move_bit <= move_count[21];
+    4'h5:  move_bit <= move_count[20];
+    4'h6:  move_bit <= move_count[19];
+    4'h7:  move_bit <= move_count[18];
+    4'h8:  move_bit <= move_count[17];
+    4'h9:  move_bit <= move_count[16];
+    4'ha:  move_bit <= move_count[15];
+    4'hb:  move_bit <= move_count[14];
+    4'hc:  move_bit <= move_count[13];
+    4'hd:  move_bit <= move_count[12];
+    4'he:  move_bit <= move_count[11];
+    4'hf:  move_bit <= move_count[10];
     endcase
   end
 
