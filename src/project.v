@@ -5,7 +5,7 @@
 
 `default_nettype none
 
-module tt09_pettit_7seg_snake
+module tt_um_7seg_snake
 (
     input  wire [7:0] ui_in,    // Dedicated inputs
     output wire [7:0] uo_out,   // Dedicated outputs
